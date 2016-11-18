@@ -20,13 +20,15 @@ post '/visit' do
     @phone = params[:userPhone]
     @data_time = params[:dataTime]
     @select_barber = params[:selectBarber]
+    @color = params[:colorVisitor]
 
     f = File.open './public/infoVisitor.txt', 'a'
     f.write "
              Visitor #{@user_name},
              Phone Visitor #{@phone},
              Data and time #{@data_time},
-             Barber: #{@select_barber}
+             Barber: #{@select_barber},
+             Visitor choose color: #{@color}
             "
     f.close
 

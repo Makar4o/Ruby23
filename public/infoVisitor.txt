@@ -16,3 +16,14 @@
              Data and time 16.12 and 19:00,
              Barber: Gus Fring
             
+             Visitor Gleb,
+             Phone Visitor 375291234567,
+             Data and time 16.12 and 19:00,
+             Barber: Walter White
+            
+             Visitor Katy,
+             Phone Visitor 567656,
+             Data and time 09.02 and 08:21,
+             Barber: Jessie Pinkman,
+             Visitor choose color: #51b749
+            
