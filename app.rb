@@ -8,6 +8,7 @@ get '/' do
 end
 
 get '/about' do
+  @error = 'something wrong!'
   erb :about
 end
 
@@ -21,6 +22,11 @@ post '/visit' do
     @data_time = params[:dataTime]
     @select_barber = params[:selectBarber]
     @color = params[:colorVisitor]
+
+    if @user_name == ''
+      @error = 'Enter name'
+      return erb :visit
+    end
 
     f = File.open './public/infoVisitor.txt', 'a'
     f.write "

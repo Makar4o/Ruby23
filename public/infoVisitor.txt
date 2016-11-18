@@ -27,3 +27,9 @@
              Barber: Jessie Pinkman,
              Visitor choose color: #51b749
             
+             Visitor ,
+             Phone Visitor ,
+             Data and time ,
+             Barber: No matter,
+             Visitor choose color: #7bd148
+            

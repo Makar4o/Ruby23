@@ -5,3 +5,6 @@
               Visitor email yana@mail.ru
               Message Visitor: Я хочу пикачу
              
+              Visitor email Katy@gmail.com
+              Message Visitor: Я довольна вашим салоном, спасибо
+             
