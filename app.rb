@@ -31,6 +31,7 @@ post '/visit' do
     if @error != ''
       return erb :visit
     end
+  erb :visit
 end
 
  #    f = File.open './public/infoVisitor.txt', 'a'

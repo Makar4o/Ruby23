@@ -21,9 +21,9 @@
   <label>Choice of Barber</label>
   <select class="form-control" name="selectBarber">
     <option>No matter</option>
-    <option>Walter White</option>
-    <option>Jessie Pinkman</option>
-    <option>Gus Fring</option>
+    <option <%= @select_barber == 'Walter White' ? 'selected' : ''%>> Walter White</option>
+    <option <%= @select_barber == 'Jessie Pinkman' ? 'selected' : ''%>> Jessie Pinkman</option>
+    <option <%= @select_barber == 'Gus Fring' ? 'selected' : ''%>> Gus Fring</option>
   </select>
   </div> <br />
 
