@@ -1,7 +1,19 @@
-#encoding: utf-8
 require 'rubygems'
 require 'sinatra'
+require 'sqlite3'
 
+configure do
+  @db = SQLite3::Database.new  'barbershop.bd'
+  @db.execute 'CREATE TABLE IF NOT EXISTS
+      Users (
+	              "id"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	              "name"	TEXT,
+	              "phone" TEXT,
+	              "dataStamp"	TEXT,
+	              "Barber"	TEXT,
+	              "color"	TEXT
+              )'
+end
 
 get '/' do
 	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for"
