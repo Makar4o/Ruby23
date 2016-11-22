@@ -8,7 +8,6 @@ get '/' do
 end
 
 get '/about' do
-  @error = 'something wrong!'
   erb :about
 end
 
@@ -23,23 +22,29 @@ post '/visit' do
     @select_barber = params[:selectBarber]
     @color = params[:colorVisitor]
 
-    if @user_name == ''
-      @error = 'Enter name'
+     hh = { :username => 'Enter name',
+            :userPhone => 'Enter phone',
+            :dataTime => 'Enter data and time'
+          }
+
+    @error = hh.select {|key,_| params[key] == ""}.values.join(", ")
+    if @error != ''
       return erb :visit
     end
-
-    f = File.open './public/infoVisitor.txt', 'a'
-    f.write "
-             Visitor #{@user_name},
-             Phone Visitor #{@phone},
-             Data and time #{@data_time},
-             Barber: #{@select_barber},
-             Visitor choose color: #{@color}
-            "
-    f.close
-
-    erb :visit
 end
+
+ #    f = File.open './public/infoVisitor.txt', 'a'
+ #     f.write "
+ #             Visitor #{@user_name},
+ #             Phone Visitor #{@phone},
+ #             Data and time #{@data_time},
+ #             Barber: #{@select_barber},
+ #             Visitor choose color: #{@color}
+ #            "
+ #    f.close
+ #
+ #     erb :visit
+ # end
 
 get '/contacts' do
   erb :contacts
@@ -56,3 +61,4 @@ post '/contacts' do
       f.close
   erb :contacts
 end
+

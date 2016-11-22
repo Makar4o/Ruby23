@@ -1,35 +1,27 @@
 
-             Visitor Makar,
-             Phone Visitor 8029-2799687,
-             Data and time 16.11 and 18:03
-            
-             Visitor Kosty,
-             Phone Visitor 8029-7555767,
-             Data and time 20.11 and 10:00
-            
-             Visitor Sasha,
-             Phone Visitor 8029-3927582,
-             Data and time 02.12 and 15:20
-            
-             Visitor Yana,
-             Phone Visitor 8029-4194123,
-             Data and time 16.12 and 19:00,
-             Barber: Gus Fring
-            
-             Visitor Gleb,
-             Phone Visitor 375291234567,
-             Data and time 16.12 and 19:00,
-             Barber: Walter White
-            
-             Visitor Katy,
-             Phone Visitor 567656,
-             Data and time 09.02 and 08:21,
-             Barber: Jessie Pinkman,
-             Visitor choose color: #51b749
-            
-             Visitor ,
+
+
+             Visitor sadas,
              Phone Visitor ,
              Data and time ,
+             Barber: No matter,
+             Visitor choose color: #7bd148
+            
+             Visitor sadas,
+             Phone Visitor asd,
+             Data and time sada,
+             Barber: Walter White,
+             Visitor choose color: #46d6db
+            
+             Visitor dasd,
+             Phone Visitor fsdafsda,
+             Data and time sdfsdaf,
+             Barber: Jessie Pinkman,
+             Visitor choose color: #46d6db
+            
+             Visitor dasd,
+             Phone Visitor fsdafsda,
+             Data and time sdfsdaf,
              Barber: No matter,
              Visitor choose color: #7bd148
             
