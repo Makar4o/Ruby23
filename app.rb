@@ -2,10 +2,14 @@ require 'rubygems'
 require 'sinatra'
 require 'sqlite3'
 
+def get_db
+  return SQLite3::Database.new  'barberShop.bd'
+end
+
 configure do
-  @db = SQLite3::Database.new  'barbershop.bd'
-  @db.execute 'CREATE TABLE IF NOT EXISTS
-      Users (
+  db = get_db
+  db.execute 'CREATE TABLE IF NOT EXISTS
+       Users (
 	              "id"	INTEGER PRIMARY KEY AUTOINCREMENT,
 	              "name"	TEXT,
 	              "phone" TEXT,
@@ -30,21 +34,37 @@ end
 post '/visit' do
     @user_name = params[:userName]
     @phone = params[:userPhone]
-    @data_time = params[:dataTime]
+    @date_time = params[:dataTime]
     @select_barber = params[:selectBarber]
     @color = params[:colorVisitor]
+    #
+    #  hh = { :username => 'Enter name',
+    #         :userPhone => 'Enter phone',
+    #         :dataTime => 'Enter data and time'
+    #       }
+    #
+    # @error = hh.select {|key,_| params[key] == ""}.values.join(", ")
+    # if @error != ''
+    #   return erb :visit
+    # end
 
-     hh = { :username => 'Enter name',
-            :userPhone => 'Enter phone',
-            :dataTime => 'Enter data and time'
-          }
 
-    @error = hh.select {|key,_| params[key] == ""}.values.join(", ")
-    if @error != ''
-      return erb :visit
-    end
+    db = get_db
+    db.execute 'insert into
+                  Users (
+                        name,
+                        phone,
+                        dataStamp,
+                        Barber,
+                        color
+                        )
+                  values ( ?, ?, ?, ?, ? )',
+                  [@user_name, @phone, @date_time, @select_barber, @color]
   erb :visit
 end
+
+
+
 
  #    f = File.open './public/infoVisitor.txt', 'a'
  #     f.write "
