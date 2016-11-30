@@ -1,18 +1,14 @@
-<table class="table">
 
-  <tr>
-    <td>one</td>
-    <td>two</td>
-  </tr>
+  <!--<%= @results %>-->
 
-  <tr>
-    <td>1one</td>
-    <td>1two</td>
-  </tr>
-
-  <tr>
-    <td>2one</td>
-    <td>3two</td>
-  </tr>
-
-</table>
+  <table class="table">
+  <% @results.each do |row| %>
+        <tr>
+            <td><%= row['name'] %></td>
+            <td><%= row['phone'] %></td>
+            <td><%= row['dataStamp'] %></td>
+            <td><%= row['Barber'] %></td>
+            <td><%= row['color'] %></td>
+        </tr>
+    <% end %>
+  </table>
