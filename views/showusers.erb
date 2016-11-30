@@ -1,8 +1,20 @@
 
   <!--<%= @results %>-->
 
-  <table class="table">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Date Stamp</th>
+      <th>Barber</th>
+      <th>Color</th>
+    </tr>
+    </thead>
+
+    <body>
   <% @results.each do |row| %>
+
         <tr>
             <td><%= row['name'] %></td>
             <td><%= row['phone'] %></td>
@@ -10,5 +22,6 @@
             <td><%= row['Barber'] %></td>
             <td><%= row['color'] %></td>
         </tr>
+        </body>
     <% end %>
   </table>
