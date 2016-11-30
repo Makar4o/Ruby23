@@ -3,7 +3,9 @@ require 'sinatra'
 require 'sqlite3'
 
 def get_db
-  return SQLite3::Database.new  'barberShop.bd'
+  db = SQLite3::Database.new  'barberShop.bd'
+  db.results_as_hash = true
+  return db
 end
 
 configure do
@@ -63,7 +65,21 @@ post '/visit' do
   erb :visit
 end
 
+get '/showusers' do
+  erb :showusers
+end
 
+post '/showusers' do
+
+  db = get_db
+  db.execute 'select * from Users' do |row|
+    print row['name']
+    print "\t-\t"
+    print row['dataStamp']
+    puts '========='
+  end
+
+end
 
 
  #    f = File.open './public/infoVisitor.txt', 'a'
