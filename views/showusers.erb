@@ -1,27 +1,25 @@
+<!--<%= @results %>-->
 
-  <!--<%= @results %>-->
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Date Stamp</th>
+    <th>Barber</th>
+    <th>Color</th>
+  </tr>
+  </thead>
 
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Date Stamp</th>
-      <th>Barber</th>
-      <th>Color</th>
-    </tr>
-    </thead>
-
-    <body>
+  <tbody>
   <% @results.each do |row| %>
-
-        <tr>
-            <td><%= row['name'] %></td>
-            <td><%= row['phone'] %></td>
-            <td><%= row['dataStamp'] %></td>
-            <td><%= row['Barber'] %></td>
-            <td><%= row['color'] %></td>
-        </tr>
-        </body>
-    <% end %>
+      <tr>
+        <td><%= row['name'] %></td>
+        <td><%= row['phone'] %></td>
+        <td><%= row['dataStamp'] %></td>
+        <td><%= row['Barber'] %></td>
+        <td><%= row['color'] %></td>
+      </tr>
+      </tbody>
+  <% end %>
   </table>
