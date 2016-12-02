@@ -1,4 +1,4 @@
-<!--<%= @results %>-->
+
 
 <table class="table table-striped">
   <thead>
@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-  <% @results.each do |row| %>
+  <% @results_users.each do |row| %>
       <tr>
         <td><%= row['name'] %></td>
         <td><%= row['phone'] %></td>
@@ -23,3 +23,5 @@
       </tbody>
   <% end %>
   </table>
+
+

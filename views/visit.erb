@@ -21,9 +21,11 @@
   <label>Choice of Barber</label>
   <select class="form-control" name="selectBarber">
     <option>No matter</option>
-    <option <%= @select_barber == 'Walter White' ? 'selected' : ''%>> Walter White</option>
-    <option <%= @select_barber == 'Jessie Pinkman' ? 'selected' : ''%>> Jessie Pinkman</option>
-    <option <%= @select_barber == 'Gus Fring' ? 'selected' : ''%>> Gus Fring</option>
+
+    <% @barbers.each do |item| %>
+        <option <%= @selectBarber == [item] ? 'selected' : '' %>><%= item['namebarber'] %></option>
+    <% end %>
+
   </select>
   </div> <br />
 
