@@ -65,7 +65,7 @@ post '/visit' do
   @date_time = params[:dataTime]
   @select_barber = params[:selectBarber]
   @color = params[:colorVisitor]
-  #
+
   #  hh = { :username => 'Enter name',
   #         :userPhone => 'Enter phone',
   #         :dataTime => 'Enter data and time'
@@ -90,7 +90,7 @@ post '/visit' do
                   values ( ?, ?, ?, ?, ? )',
              [@user_name, @phone, @date_time, @select_barber, @color]
 
-  erb :visit
+  erb "<h1>Thank, you recorded</h1>"
 end
 
 get '/showusers' do
@@ -113,19 +113,6 @@ post '/showusers' do
   end
 end
 
-
-#    f = File.open './public/infoVisitor.txt', 'a'
-#     f.write "
-#             Visitor #{@user_name},
-#             Phone Visitor #{@phone},
-#             Data and time #{@data_time},
-#             Barber: #{@select_barber},
-#             Visitor choose color: #{@color}
-#            "
-#    f.close
-#
-#     erb :visit
-# end
 
 get '/contacts' do
   erb :contacts
